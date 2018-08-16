@@ -1,0 +1,14 @@
+<h1>Events</h1>
+
+<!-- <%@events.each do |event| %>
+  <%= event.title %>
+  <%= event.description %>
+  <%= event.end_time %>
+  <%= event.start_time %>
+<% end %> -->
+
+<div id="calendar"></div>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Event', new_event_path %>
+<% end %>

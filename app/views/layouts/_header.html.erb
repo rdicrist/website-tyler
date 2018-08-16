@@ -1,0 +1,9 @@
+<header role="banner" class="app-header">
+  <div id="mySidenav" class="headerMenu">
+    <%= link_to 'Home', '/' %>
+    <%= link_to 'Calendar', '/events' %>
+    <%= link_to 'Contact Tyler', '/contact-me' %>
+
+    <% if user_signed_in? %>
+      <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+    <% end %>

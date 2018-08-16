@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tyler Fay</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <script src='lib/jquery.min.js'></script>
+    <script src='lib/moment.min.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+  </head>
+
+  <body>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+    <%= render "layouts/header" %>
+
+    <%= yield %>
+  </body>
+</html>

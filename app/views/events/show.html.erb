@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<div class="margin">
+<h1>
+  <%= @event.title %>
+</h1>
+
+<h2>
+  <%= @event.description %>
+</h2>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.start_time.strftime('%m/%d/%Y at %I:%M %p') %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @event.end_time.strftime('%m/%d/%Y at %I:%M %p') %>
+</p>
+
+  <%= link_to 'Back', events_path %>
+
+<% if user_signed_in? %>
+  <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>
+</div>

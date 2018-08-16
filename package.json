@@ -1,0 +1,8 @@
+{
+  "name": "TestApp",
+  "private": true,
+  "dependencies": {
+    "fullcalendar": "^3.9.0",
+    "jquery": "^3.3.1"
+  }
+}
