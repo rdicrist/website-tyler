@@ -58,3 +58,7 @@ gem 'momentjs-rails'
 gem 'jquery-rails'
 
 gem 'devise'
+
+gem 'mailgun-ruby', '~>1.1.6'
+
+gem "figaro"
