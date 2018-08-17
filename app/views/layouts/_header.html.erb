@@ -1,9 +1,13 @@
-<header role="banner" class="app-header">
-  <div id="mySidenav" class="headerMenu">
-    <%= link_to 'Home', '/' %>
-    <%= link_to 'Calendar', '/events' %>
-    <%= link_to 'Contact Tyler', '/contact-me' %>
+<div class="header">
+  <a href="/" class="logo">TylerFay</a>
+
+  <div class="header-right">
+    <a href="/events">Calendar</a>
+    <a href="/contact-me">Contact Tyler</a>
 
     <% if user_signed_in? %>
       <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
     <% end %>
+    
+  </div>
+</div>
