@@ -52,4 +52,9 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.action_mailer.delivery_method = :mailgun
+    config.action_mailer.mailgun_settings = {
+     api_key: 'ENV["mailgun_api_key"]',
+     domain: ' https://api.mailgun.net/v3/sandbox24b3ab68ded74c9c945c0c1c06f01f3d.mailgun.org',
+    }
 end
