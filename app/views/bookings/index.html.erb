@@ -1,6 +1,20 @@
 <h1>Bookings</h1>
 
-<% @bookings.each do |booking| %>
-  <%= booking.title %>
-  <%= link_to "View Booking", booking_path(booking) %>
-<% end %>
+<table>
+<thead>
+  <tr>
+    <th>Title</th>
+    <th>View</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @bookings.each do |booking| %>
+    <tr>
+      <td><%= booking.title %></td>
+      <td><%= link_to "View Booking", booking_path(booking) %></td>
+    </tr>
+  <% end %>
+</tbody>
+
+</table>

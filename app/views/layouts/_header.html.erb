@@ -6,8 +6,9 @@
     <a href="/contact-me">Contact Tyler</a>
 
     <% if user_signed_in? %>
+      <%= link_to 'Manage Bookings', '/bookings' %>
       <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
     <% end %>
-    
+
   </div>
 </div>
