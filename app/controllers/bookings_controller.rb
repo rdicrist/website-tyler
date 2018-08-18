@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
 
     if @booking.update(booking_params)
       flash[:notice] = "Successfully updated event!"
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
       flash[:alert] = "Error udpating event!"
       render :new

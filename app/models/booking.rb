@@ -18,7 +18,7 @@ class Booking < ApplicationRecord
   after_update :create_new_event
 
   def create_new_event
-    binding.pry
     Event.create!(start_time: event_start, end_time: event_end, title: title, description: description) if self.accept == true
+    self.destroy if self.accept == false
   end
 end
