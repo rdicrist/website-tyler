@@ -17,6 +17,9 @@
 
  input, textarea { display: block; }
 
+ body {
+     background-color: #EDF6EA;
+ }
  /* Container holding the image and the text */
 .container {
     position: relative;
@@ -63,14 +66,14 @@
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #DBEDD6;
   padding: 20px 10px;
 }
 
 /* Style the header links */
 .header a {
   float: left;
-  color: black;
+  color: #394C34;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -112,4 +115,18 @@
   .header-right {
     float: none;
   }
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: green;
 }

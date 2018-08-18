@@ -39,6 +39,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'annotate'
 end
 
 group :development do
@@ -62,3 +63,5 @@ gem 'devise'
 gem 'mailgun-ruby', '~>1.1.6'
 
 gem "figaro"
+
+gem 'pry'

@@ -8,3 +8,5 @@
 Event.create(title: 'Event1', description: 'Event1 description', start_time: Date.current - 2.days - 2.hours, end_time: Date.current - 2.days)
 
 User.create(email: 'admin@tylerfay.com', password: '123456')
+
+Booking.create(title: 'Booking1', description: 'Booking1 description', event_start: Date.current + 2.days - 2.hours, event_end: Date.current + 2.days, booker_name: 'Ricki', booker_email: 'example@ex.com')

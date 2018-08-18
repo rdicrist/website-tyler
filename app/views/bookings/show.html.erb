@@ -1,0 +1,34 @@
+<div class="margin">
+<h1>
+  <%= @booking.title %>
+</h1>
+
+<h2>
+  <%= @booking.description %>
+</h2>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @booking.event_start.strftime('%m/%d/%Y at %I:%M %p') %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @booking.event_end.strftime('%m/%d/%Y at %I:%M %p') %>
+</p>
+
+<p>
+  <strong>Booker Name:</strong>
+  <%= @booking.booker_name %>
+</p>
+
+<p>
+  <strong>Booker Email:</strong>
+  <%= @booking.booker_email %>
+</p>
+
+  <%= link_to 'Back', '/' %>
+
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_booking_path(@booking) %>
+  <% end %>
