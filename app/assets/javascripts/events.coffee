@@ -9,6 +9,9 @@ $(document).on 'ready page:load', ->
         center: 'title',
         right: 'today,prev,next'
       },
+
+      theme: true,
+      themeSystem: 'standard',
       events: '/events.json',
 
       timeFormat: 'hh:mm a'
