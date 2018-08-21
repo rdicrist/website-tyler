@@ -65,3 +65,5 @@ gem 'mailgun-ruby', '~>1.1.6'
 gem "figaro"
 
 gem 'pry'
+
+gem 'yt', '~> 0.13.7'
