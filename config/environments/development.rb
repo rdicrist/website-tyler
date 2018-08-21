@@ -44,8 +44,6 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.assets.precompile = true
-
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
