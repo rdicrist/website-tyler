@@ -135,7 +135,6 @@
 padding: 8px 14px;
 margin-bottom: 20px;
 background-color: #fcf8e3;
-@include border-radius(2px);
 }
 .flash-message {
 display: inline-block;
