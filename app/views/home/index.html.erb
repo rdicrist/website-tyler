@@ -16,3 +16,12 @@
 <h2>About Tyler</h2>
 <p>This is where an about Tyler and description of what he does will go.</p>
 </center>
+
+<center>
+<% if @video %>
+  <h3>
+    Latest Video
+  </h3>
+  <%= video_tag @video.video_url.to_s, :controls =>true, :width => '75%' %>
+<% end %>
+</center>

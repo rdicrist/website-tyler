@@ -30,12 +30,19 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
 
     if @booking.update(booking_params)
-      flash[:notice] = "Successfully updated event!"
+      flash[:notice] = "Successfully updated booking!"
       redirect_to bookings_path
     else
-      flash[:alert] = "Error udpating event!"
+      flash[:alert] = "Error udpating booking!"
       render :new
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    flash[:notice] = "Successfully destroyed booking!"
+    redirect_to bookings_path
   end
 
   private
