@@ -1,0 +1,16 @@
+<center>
+<h1>Pictures</h1>
+
+<% @pictures.each do |picture|%>
+  <div class="picture">
+    <h3>
+      <%= picture.title %>
+    </h3>
+    <%= image_tag picture.picture_url.to_s, :controls =>true, :width => '75%' %>
+  </div>
+  <% if user_signed_in? %>
+    <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%= link_to 'Edit', edit_picture_path(picture) %> |
+  <% end %>
+<%end%>
+</center>

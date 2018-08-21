@@ -4,11 +4,13 @@
   <div class="header-right">
     <a href="/events">Calendar</a>
     <a href="/videos">Videos</a>
+    <a href="/pictures">Pictures</a>
     <a href="/contact-me">Contact Tyler</a>
 
     <% if user_signed_in? %>
       <%= link_to 'Manage Bookings', '/bookings' %>
       <%= link_to 'Add Video', '/videos/new' %>
+      <%= link_to 'Add Picture', '/pictures/new' %>
       <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
     <% end %>
 
