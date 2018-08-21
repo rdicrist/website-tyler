@@ -1,0 +1,12 @@
+<center>
+<h1>Videos</h1>
+
+<% @videos.each do |video|%>
+  <div class="video">
+    <h3>
+      <%= video.title %>
+    </h3>
+    <%= video_tag video.video_url.to_s, :controls =>true, :width => '75%' %>
+  </div>
+<%end%>
+</center>

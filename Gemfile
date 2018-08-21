@@ -66,4 +66,4 @@ gem "figaro"
 
 gem 'pry'
 
-gem 'yt', '~> 0.13.7'
+gem 'carrierwave', '~> 1.0'
