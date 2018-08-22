@@ -19,10 +19,15 @@
 
  body {
      background-color: #EDF6EA;
+     min-height: 100%;
+     margin-bottom: 50px;
  }
 
  html  {
-   color: #2B3927
+   color: #2B3927;
+   position: relative;
+   min-height: 100%;
+   margin-bottom: 45px;
  }
  /* Container holding the image and the text */
 .container {
@@ -221,14 +226,19 @@ color: #3a87ad;
     resize: vertical;
 }
 
-#form[type=text], text {
-    width: 75%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2B3927;
+  color: white;
+  height: 40px;
+  text-align: center;
+
 }
 
-h1 {
-  color: #2B3927;
+.left {
+  float: left;
+  padding: 5px ;
 }
