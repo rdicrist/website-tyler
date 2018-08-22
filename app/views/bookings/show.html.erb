@@ -27,8 +27,14 @@
   <%= @booking.booker_email %>
 </p>
 
-  <%= link_to 'Back', '/' %>
+<p>
+  <strong>Booker Phone Number:</strong>
+  <%= @booking.booker_phonenumber %>
+</p>
 
-  <% if user_signed_in? %>
-    <%= link_to 'Edit', edit_booking_path(@booking) %>
-  <% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_booking_path(@booking) %>
+  <td><%= link_to 'Destroy', @booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+
+  <button onclick="location.href='/'" class="back-button">Home</button>

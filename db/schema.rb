@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20180821025008) do
   create_table "bookings", force: :cascade do |t|
     t.string "booker_name"
     t.string "booker_email"
+    t.string "booker_phonenumber"
     t.datetime "event_start"
     t.datetime "event_end"
     t.string "title"
