@@ -20,11 +20,15 @@
  body {
      background-color: #EDF6EA;
  }
+
+ html  {
+   color: #2B3927
+ }
  /* Container holding the image and the text */
 .container {
     position: relative;
     text-align: center;
-    color: white;
+    color: white !important;
 }
 
 /* Bottom left text */
@@ -186,12 +190,29 @@ color: #3a87ad;
 }
 }
 
-.video {
+.field {
+  border-radius: 5px;
+  padding: 20px;
+  color: #2B3927;
+  width: 100%;
   float: left;
-  width: 33%;
 }
 
-.pictures{
+.actions {
+  background-color: #64855C;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
   float: left;
-  width: 33.33%;
+  font-size: 16px;
+}
+
+.actions:hover {
+    background-color: green;
+}
+
+h1 {
+  color: #2B3927;
 }

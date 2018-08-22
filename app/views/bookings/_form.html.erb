@@ -13,7 +13,7 @@
   <% end %>
   <div class="field">
     <%= f.label 'Name' %><br>
-    <%= f.text_field :booker_name %>
+    <%= f.text_field :booker_name%>
   </div>
   <div class="field">
     <%= f.label 'Email' %><br>
@@ -21,22 +21,22 @@
   </div>
   <div class="field">
     <%= f.label 'Phone Number' %><br>
-    <%= f.text_field :booker_phonenumber %>
+    <%= f.text_field :booker_phonenumber%>
   </div>
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title%>
   </div>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :event_start %><br>
+    <%= f.label 'Start Time' %><br>
     <%= f.datetime_select :event_start, ampm: true %>
   </div>
   <div class="field">
-    <%= f.label :event_end %><br>
+    <%= f.label 'End Time' %><br>
     <%= f.datetime_select :event_end, ampm: true %>
   </div>
 
@@ -48,7 +48,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Request a Booking', :class => "actions"  %>
   </div>
 <% end %>
 </div>
