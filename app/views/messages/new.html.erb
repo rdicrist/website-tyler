@@ -3,9 +3,17 @@
 <%= form_for @message, url: create_message_url do |f| %>
   <%= notice %>
   <%= @message.errors.full_messages.join(', ') %>
-
-  <%= f.text_field :name, placeholder: 'name' %>
-  <%= f.email_field :email, placeholder: 'email' %>
-  <%= f.text_area :body, placeholder: 'body' %>
-  <%= f.submit 'Send' %>
+<div class="field">
+  <%= f.label 'Name' %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label 'Email' %><br>
+  <%= f.email_field :email %>
+</div>
+<div class="field">
+  <%= f.label 'Message' %><br>
+  <%= f.text_area :body %>
+</div>
+  <%= f.submit 'Send', :class => "actions"  %>
 <% end %>

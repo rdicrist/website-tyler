@@ -213,6 +213,22 @@ color: #3a87ad;
     background-color: green;
 }
 
+#form[type=text], textarea {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#form[type=text], text {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
 h1 {
   color: #2B3927;
 }
