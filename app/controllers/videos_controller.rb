@@ -16,6 +16,10 @@ class VideosController < ApplicationController
     @videos = Video.where(:category => 'country')
   end
 
+  def rock
+    @videos = Video.where(:category => 'rock')
+  end
+
   def show
     @video = Video.find(params[:id])
   end

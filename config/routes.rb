@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/jazz" => "videos#jazz"
   get "/blues" => "videos#blues"
   get "/country" => "videos#country"
+  get "/rock" => "videos#rock"
 
   resources :pictures
 

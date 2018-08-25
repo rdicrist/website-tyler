@@ -11,7 +11,7 @@
 #
 
 class Video < ApplicationRecord
-  enum category: {'jazz':0, 'blues':1, 'country':2}
+  enum category: {'jazz':0, 'blues':1, 'country':2, 'rock':3}
 
   mount_uploader :video, VideoUploader
 end
