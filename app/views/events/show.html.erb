@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div class="margin">
+<div class="event">
 <h1>
   <%= @event.title %>
 </h1>
@@ -10,15 +10,15 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @event.start_time.strftime('%m/%d/%Y at %I:%M %p') %>
+  <%= @event.start_time.strftime('%A, %B %d at %I:%M %p') %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @event.end_time.strftime('%m/%d/%Y at %I:%M %p') %>
+  <%= @event.end_time.strftime('%A, %B %d at %I:%M %p') %>
 </p>
 
-  <%= link_to 'Back', events_path %>
+  <button onclick="location.href='/events'" class="back-button">Back</button>
 
 <% if user_signed_in? %>
   <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

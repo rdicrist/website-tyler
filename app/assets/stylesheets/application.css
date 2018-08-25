@@ -135,6 +135,7 @@
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 12px;
 }
 
 .button:hover {
@@ -149,6 +150,7 @@
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 12px;
 }
 
 .back-button:hover {
@@ -243,4 +245,38 @@ color: #3a87ad;
 .left {
   float: left;
   padding: 5px ;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.picture {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 2px;
+  float: left;
+}
+
+.picture h3 {
+  text-align: center;
+}
+
+.spacer {
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .picture {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.event {
+  text-align: center;
+  border-style: solid;
+  border-color: #2B3927;
 }
