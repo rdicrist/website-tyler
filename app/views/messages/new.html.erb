@@ -5,11 +5,11 @@
   <%= @message.errors.full_messages.join(', ') %>
 <div class="field">
   <%= f.label 'Name' %><br>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :class => "field" %>
 </div>
 <div class="field">
   <%= f.label 'Email' %><br>
-  <%= f.email_field :email %>
+  <%= f.email_field :email, :class => "field" %>
 </div>
 <div class="field">
   <%= f.label 'Message' %><br>

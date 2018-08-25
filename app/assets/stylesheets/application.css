@@ -202,11 +202,10 @@ color: #3a87ad;
 }
 
 .field {
-  border-radius: 5px;
-  padding: 20px;
-  color: #2B3927;
-  width: 100%;
-  float: left;
+  /* padding: 12px;
+  /* border: 1px solid #ccc; 
+  border-radius: 4px;
+  resize: vertical; */
 }
 
 .actions {
@@ -250,16 +249,20 @@ color: #3a87ad;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 3;
+  -moz-column-gap: 0px;
+  column-count: 3;
+  column-gap: 0px;
+
 }
 
 .picture {
-  flex: 33%;
-  max-width: 33%;
-  padding: 0 2px;
-  float: left;
+  width: 100% !important;
+  height: auto !important;
+  margin: 10px;
 }
 
 .picture h3 {
@@ -268,13 +271,6 @@ color: #3a87ad;
 
 .spacer {
   clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .picture {
-    flex: 100%;
-    max-width: 100%;
-  }
 }
 
 .event {
