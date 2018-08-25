@@ -28,6 +28,7 @@
    position: relative;
    min-height: 100%;
    margin-bottom: 45px;
+   font-family: verdana;
  }
  /* Container holding the image and the text */
 .container {
@@ -291,7 +292,7 @@ color: #3a87ad;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: #2B3927; 
+    color: #2B3927;
 }
 
 .vidLabels a:hover {
