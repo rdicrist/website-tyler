@@ -69,5 +69,4 @@ class VideosController < ApplicationController
     vp[:category] = params[:video][:category].to_i
     return vp
   end
-
 end
