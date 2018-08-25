@@ -1,6 +1,19 @@
 class VideosController < ApplicationController
+
   def index
     @videos = Video.all
+  end
+
+  def jazz
+    @videos = Video.where(:category => 'jazz')
+  end
+
+  def blues
+    @videos = Video.where(:category => 'blues')
+  end
+
+  def country
+    @videos = Video.where(:category => 'country')
   end
 
   def show
@@ -48,6 +61,9 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:title, :video)
+    vp = params.require(:video).permit(:title, :video, :category)
+    vp[:category] = params[:video][:category].to_i
+    return pp
   end
+
 end

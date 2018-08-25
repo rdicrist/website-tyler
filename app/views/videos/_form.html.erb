@@ -19,6 +19,10 @@
     <%= f.label :video %><br>
     <%= f.file_field :video %>
   </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category, options_for_select(Video.categories) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

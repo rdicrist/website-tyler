@@ -2,16 +2,17 @@
 #
 # Table name: bookings
 #
-#  id           :bigint(8)        not null, primary key
-#  booker_name  :string
-#  booker_email :string
-#  event_start  :datetime
-#  event_end    :datetime
-#  title        :string
-#  description  :string
-#  accept       :boolean
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id                 :bigint(8)        not null, primary key
+#  booker_name        :string
+#  booker_email       :string
+#  event_start        :datetime
+#  event_end          :datetime
+#  title              :string
+#  description        :string
+#  accept             :boolean
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  booker_phonenumber :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

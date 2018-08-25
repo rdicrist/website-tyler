@@ -280,3 +280,20 @@ color: #3a87ad;
   border-style: solid;
   border-color: #2B3927;
 }
+
+.vidLabels {
+
+}
+
+.vidLabels a {
+    /* float: center; */
+    /* display: block; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #2B3927; 
+}
+
+.vidLabels a:hover {
+  text-decoration: underline;
+}

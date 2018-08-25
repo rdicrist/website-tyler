@@ -1,6 +1,13 @@
 <center>
 <h1>Videos</h1>
 
+<div class="vidLabels">
+  <%= link_to 'All', "/videos" %>
+  <%= link_to 'Country', "/country" %>
+  <%= link_to 'Blues', "/blues" %>
+  <%= link_to 'Jazz', "/jazz" %>
+</div>
+
 <% @videos.each do |video|%>
     <h3>
       <%= video.title %>

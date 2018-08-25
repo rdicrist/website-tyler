@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   resources :videos
 
+  get "/jazz" => "videos#jazz"
+  get "/blues" => "videos#blues"
+  get "/country" => "videos#country"
+
   resources :pictures
 
   get 'contact-me', to: 'messages#new', as: 'new_message'
