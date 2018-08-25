@@ -69,3 +69,7 @@ gem 'pry'
 gem 'carrierwave', '~> 1.0'
 
 gem "mini_magick"
+
+gem 'aws-sdk', '~> 2'
+
+gem 'fog-aws'
