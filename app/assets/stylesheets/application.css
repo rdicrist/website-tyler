@@ -203,7 +203,7 @@ color: #3a87ad;
 
 .field {
   /* padding: 12px;
-  /* border: 1px solid #ccc; 
+  /* border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical; */
 }
@@ -263,6 +263,7 @@ color: #3a87ad;
   width: 100% !important;
   height: auto !important;
   margin: 10px;
+  float: left;
 }
 
 .picture h3 {
