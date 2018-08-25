@@ -63,7 +63,7 @@ class VideosController < ApplicationController
   def video_params
     vp = params.require(:video).permit(:title, :video, :category)
     vp[:category] = params[:video][:category].to_i
-    return pp
+    return vp
   end
 
 end
