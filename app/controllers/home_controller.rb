@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
-  def index
-    @video = Video.last
-  end
+
+	def show
+        render template: "home/#{params[:page]}"
+    end
+
+	def index
+	@video = Video.last
+	end
 end

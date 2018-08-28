@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
 
+  get "/home/:page" => "home#show"
+
   root 'home#index'
 
   resources :events
