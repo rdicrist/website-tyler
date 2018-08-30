@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
@@ -63,11 +63,21 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "TestApp_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :mailgun
-    config.action_mailer.mailgun_settings = {
-     api_key: 'ENV["mailgun_api_key"]',
-     domain: 'tylerjfay.com',
-    }
+  # config.action_mailer.delivery_method = :mailgun
+  #   config.action_mailer.mailgun_settings = {
+  #    api_key: 'ENV["mailgun_api_key"]',
+  #    domain: 'tylerjfay.com',
+  #   }
+
+  ActionMailer::Base.smtp_settings = {
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'tylerjfay.com',
+    :authentication => :plain,
+  }
+ActionMailer::Base.delivery_method = :smtp
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
