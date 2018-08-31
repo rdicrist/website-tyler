@@ -13,6 +13,6 @@ class MessageMailer < ApplicationMailer
 
   def contact_me(message)
     @message = message
-    mail to: ENV['email'], subject: "Message from TylerJFay.com!"
+    mail to: ENV['email'], from: @message.email, subject: "Message from TylerJFay.com!", text: @message.body
   end
 end
