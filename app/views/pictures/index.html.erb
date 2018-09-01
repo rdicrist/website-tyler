@@ -11,7 +11,7 @@
       <%= link_to (image_tag picture.picture_url.to_s, :width => '75%'), picture_path(picture) %>
     <% if user_signed_in? %>
       <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <%= link_to 'Edit', edit_picture_path(picture) %> |
+      <%= link_to 'Edit', edit_picture_path(picture) %> 
     <% end %>
     </div>
   <%end%>
