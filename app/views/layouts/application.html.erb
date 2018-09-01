@@ -12,7 +12,7 @@
 
     <meta property="og:description" content="Tyler J. Fay: Local Musician" />
 
-    <meta property=”og:image” content="http://www.tylerjfay.com/" />
+    <%= image_link_tag asset_path('kitties.jpeg'), :rel => 'og:image', :type =>  'image/jpeg' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
