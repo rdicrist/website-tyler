@@ -7,13 +7,17 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
 
-    if @message.valid?
-      MessageMailer.contact_me(@message).deliver
-      redirect_to new_message_url
-      flash[:notice] = "Message received, thanks!"
-    else
-      flash[:notice] = "There was an error sending your message. Please try again."
-      render :new
+    respond_to do |format|
+
+      if @message.valid?
+        MessageMailer.contact_me(@message).deliver
+        format.html { redirect_to home_index_url, success: 'Thanks for your message!'}
+        format.json { render :new, status: :created, location: @message }
+      else
+        format.html { render :new }
+        format.json { render json: @message.errors, status: :unprocessable_entity }
+      end
+
     end
   end
 

@@ -17,32 +17,42 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    if @booking.save
-      flash[:notice] = "Successfully asked for event!"
-      redirect_to booking_path(@booking)
-    else
-      flash[:alert] = "Error requesting event!"
-      render :new
+    respond_to do |format|
+      
+      if @booking.save
+        format.html {redirect_to @booking, success: 'Successfully asked for booking!'}
+        format.json { render :show, status: :created, location: @booking }
+      else
+        format.html { render :new }
+        format.json { render json: @booking.errors, status: :unprocessable_entity }
+      end
+
     end
   end
 
   def update
     @booking = Booking.find(params[:id])
 
-    if @booking.update(booking_params)
-      flash[:notice] = "Successfully updated booking!"
-      redirect_to bookings_path
-    else
-      flash[:alert] = "Error udpating booking!"
-      render :new
+    respond_to do |format|
+
+      if @booking.update(booking_params)
+        format.html {redirect_to @booking, info: 'Successfully updated booking!'}
+        format.json { render :show, status: :created, location: @booking }
+      else
+        format.html { render :edit}
+        format.json { render json: @booking.errors, status: :unprocessable_entity }
+      end
+
     end
+
   end
 
   def destroy
     @booking = Booking.find(params[:id])
-    @booking.destroy
-    flash[:notice] = "Successfully destroyed booking!"
-    redirect_to bookings_path
+  respond_to do |format|
+    format.html { redirect_to bookings_url, danger: 'Booking was successfully destroyed.' }
+    format.json { head :no_content }
+  end
   end
 
   private

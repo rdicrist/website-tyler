@@ -17,12 +17,7 @@
     <script src='lib/moment.min.js'></script>
     <script src='fullcalendar/fullcalendar.js'></script>
 
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+    <%= render :partial => 'flash_messages', :flash => flash %>
 
     <%= render "layouts/header" %>
 
