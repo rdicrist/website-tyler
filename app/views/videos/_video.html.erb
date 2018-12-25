@@ -6,13 +6,15 @@
   <%= link_to 'Rock', "/rock" %>
 </div>
 
-<% @videos.each do |video|%>
-    <h3>
-      <%= video.title %>
-    </h3>
-    <%= video_tag video.video_url.to_s, :controls =>true, :width => '75%' %>
-  <% if user_signed_in? %>
-    <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <%= link_to 'Edit', edit_video_path(video) %> |
-  <% end %>
-<%end%>
+
+<div class="gallery">
+  <% @videos.each do |video|%>
+      <div class="video">
+        <%= video_tag video.video_url.to_s, :controls =>true, :width => '100%' %>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to 'Edit', edit_video_path(video) %> |
+        <% end %>
+      </div>
+    <%end%>
+</div>

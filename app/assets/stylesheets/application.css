@@ -266,6 +266,12 @@ color: #3a87ad;
   margin: 10px;
 }
 
+.video {
+  width: 100% !important;
+  height: auto !important;
+  margin: 10px;
+}
+
 .picture h3 {
   text-align: center;
 }
