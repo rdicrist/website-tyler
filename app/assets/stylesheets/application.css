@@ -263,17 +263,47 @@ color: #3a87ad;
 .picture {
   width: 100% !important;
   height: auto !important;
-  margin: 10px;
+  /* transition: transform .2s; makes picture zoom on hover */
+
+  /* makes title appear when hover */
+  display: block;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
+
+/* makes text appear when hover */
+.title {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .picture {
+  opacity: 0.3;
+}
+
+.container:hover .title {
+  opacity: 1;
+}
+
+.text {
+  /* background-color: #4CAF50; */
+  color: #2B3927;
+  font-size: 30px;
+  /* padding: 16px 32px; */
+}
+/* ends makes text appear when hover */
 
 .video {
   width: 100% !important;
   height: auto !important;
-  margin: 10px;
-}
-
-.picture h3 {
-  text-align: center;
+  /* margin: 10px; */
 }
 
 .spacer {
