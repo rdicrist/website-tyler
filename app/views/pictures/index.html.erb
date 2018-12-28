@@ -3,9 +3,6 @@
 </center>
 
 <div class="gallery">
-  <div class="spacer">
-    &nbsp;
-  </div>
   <% @pictures.each do |picture|%>
     <div class="container">
       <div class="picture">
@@ -18,12 +15,8 @@
         </p>
       <% end %>
       <div class="title">
-        # <div class="text"> <%= picture.title %> </div>
-        <div class="text">John Doe was here</div>
+        <div class="text"> <%= picture.title %> </div>
       </div>
     </div>
   <%end%>
-  <div class="spacer">
-    &nbsp;
-  </div>
 </div>
