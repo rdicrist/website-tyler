@@ -263,9 +263,6 @@ color: #3a87ad;
 .picture {
   width: 100% !important;
   height: auto !important;
-  /* transition: transform .2s; makes picture zoom on hover */
-
-  /* makes title appear when hover */
   display: block;
   opacity: 1;
   transition: .5s ease;
@@ -273,11 +270,16 @@ color: #3a87ad;
 }
 
 /* makes text appear when hover */
+
+.container {
+  position: relative;
+}
+
 .title {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 95%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -293,10 +295,8 @@ color: #3a87ad;
 }
 
 .text {
-  /* background-color: #4CAF50; */
   color: #2B3927;
   font-size: 30px;
-  /* padding: 16px 32px; */
 }
 /* ends makes text appear when hover */
 

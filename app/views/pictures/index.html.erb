@@ -10,15 +10,16 @@
     <div class="container">
       <div class="picture">
         <%= image_tag picture.picture_url.to_s, :width => '100%'%>
+      </div>
       <% if user_signed_in? %>
         <p>
           <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <%= link_to 'Edit', edit_picture_path(picture) %> 
         </p>
       <% end %>
-      </div>
       <div class="title">
-        <div class="text"> <%= picture.title %> </div>
+        # <div class="text"> <%= picture.title %> </div>
+        <div class="text">John Doe was here</div>
       </div>
     </div>
   <%end%>
